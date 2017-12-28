@@ -81,7 +81,7 @@
 
     ### Text ###
 
-    font = DejaVu Sans Mono 8
+    font = DejaVu Sans Mono 9
 
     # The spacing between lines
     line_height = 0
