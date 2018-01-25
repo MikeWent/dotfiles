@@ -19,7 +19,7 @@
         "suppressGitVersionWarning": false,
         "suppressLineUncommittedWarning": false,
         "suppressNoRepositoryWarning": false,
-        "suppressUpdateNotice": false,
+        "suppressUpdateNotice": true,
         "suppressWelcomeNotice": true
     },
     "workbench.colorTheme": "Arc+ (Dark Monochrome)",
@@ -31,6 +31,7 @@
     "terminal.integrated.cursorStyle": "underline",
     "workbench.iconTheme": "material-icon-theme",
     "explorer.confirmDragAndDrop": false,
-    "terminal.integrated.fontFamily": "DejaVu Sans Mono",
-    "terminal.integrated.fontSize": 13,
+    "terminal.integrated.fontFamily": "Ubuntu Mono",
+    "terminal.integrated.fontSize": 14,
+    "workbench.activityBar.visible": true,
 }
