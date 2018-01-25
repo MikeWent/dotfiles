@@ -1,5 +1,5 @@
 [Configuration]
-FontName=DejaVu Sans Mono 11
+FontName=DejaVu Sans Mono 12
 MiscAlwaysShowTabs=FALSE
 MiscBell=FALSE
 MiscBellUrgent=FALSE
@@ -33,6 +33,8 @@ ShortcutsNoMnemonics=TRUE
 WordChars=-A-Za-z0-9,./?%&#_=+@~
 ColorForeground=#c0c5ce
 ColorCursor=x
-ColorPalette=#2b303b;#bf616a;#a3be8c;#ebcb8b;#8fa1b3;#b48ead;#96b5b4;#c0c5ce;#65737e;#bf616a;#a3be8c;#ebcb8b;#8fa1b3;#b48ead;#96b5b4;#eff1f5
-ColorBackground=#2b303b
+ColorPalette=rgb(64,69,82);rgb(191,97,106);rgb(163,190,140);rgb(235,203,139);rgb(143,161,179);rgb(180,142,173);rgb(150,181,180);rgb(192,197,206);rgb(101,115,126);rgb(191,97,106);rgb(163,190,140);rgb(235,203,139);rgb(143,161,179);rgb(180,142,173);rgb(150,181,180);rgb(239,241,245)
+ColorBackground=#3308371b41b4
+BackgroundMode=TERMINAL_BACKGROUND_TRANSPARENT
+BackgroundDarkness=0.950000
 
