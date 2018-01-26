@@ -1,7 +1,6 @@
 # dotfiles
 
-![screenshot 1](screenshot-2018-01-25_21-14-25.png)
-![screenshot 2](screenshot-2018-01-25_21-01-29.png)
+![screenshot](screenshot-2018-01-26-172302.png)
 
 [Download wallpaper](https://unsplash.com/photos/s95DnBWUe-8)
 
