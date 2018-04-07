@@ -1,16 +1,16 @@
 # dotfiles
 
-![screenshot](screenshot-2018-01-26-172302.png)
+![screenshot](screenshot-2018-04-07.png)
 
-[Download wallpaper](https://unsplash.com/photos/s95DnBWUe-8)
+[Download wallpaper](https://linux.pictures/projects/like-a-boss-free-libre-and-open-source-pic)
 
 What included:
 
-- Visual Studio Code
-- i3-gaps + dmenu + keyboard layout (ru/en)
+- i3-gaps + dmenu + keyboard layout (ru/en) + hotkeys
 - dunst
 - xfce4-terminal
 - Telegram white notification icons
+- Visual Studio Code
 
 ## How to install
 

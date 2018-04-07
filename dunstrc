@@ -29,7 +29,7 @@
     # the top and down respectively.
     # The width can be negative.  In this case the actual width is the
     # screen width minus the width defined in within the geometry option.
-    geometry = "300x5-4+30"
+    geometry = "300x5-4+28"
 
     # Show how many messages are currently hidden (because of geometry).
     indicate_hidden = yes
@@ -41,7 +41,7 @@
     # The transparency of the window.  Range: [0; 100].
     # This option will only work if a compositing window manager is
     # present (e.g. xcompmgr, compiz, etc.).
-    transparency = 10
+    transparency = 25
 
     # The height of the entire notification.  If the height is smaller
     # than the font height and padding combined, it will be raised
@@ -64,7 +64,7 @@
     frame_width = 3
 
     # Defines color of the frame around the notification window.
-    frame_color = "#383C4A"
+    frame_color = "#2A2A2B"
 
     # Define a color for the separator.
     # possible values are:
@@ -123,7 +123,7 @@
 
     # Alignment of message text.
     # Possible values are "left", "center" and "right".
-    alignment = left
+    alignment = right
 
     show_age_threshold = 60
     word_wrap = yes
@@ -157,17 +157,17 @@
     startup_notification = false
 
 [urgency_low]
-    background = "#323843"
+    background = "#2B2B2C"
     foreground = "#888888"
     timeout = 3
 
 [urgency_normal]
-    background = "#3C404E"
+    background = "#353537"
     foreground = "#ffffff"
-    timeout = 10
+    timeout = 6
 
 [urgency_critical]
-    background = "#5294E2"
+    background = "#353537"
     foreground = "#ffffff"
-    frame_color = "#5294E2"
+    frame_color = "#3F7CF1"
     timeout = 0
