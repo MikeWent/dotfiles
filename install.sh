@@ -10,7 +10,7 @@ cp dunstrc ~/.config/dunst/dunstrc
 
 # vscode
 mkdir -p ~/.config/Code/User
-cp vscode.json ~/.config/Code/User/vscode.json
+cp vscode.json ~/.config/Code/User/settings.json
 
 # xfce4-terminal
 mkdir -p ~/.config/xfce4/terminal

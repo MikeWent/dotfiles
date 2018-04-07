@@ -22,7 +22,6 @@
         "suppressUpdateNotice": true,
         "suppressWelcomeNotice": true
     },
-    "workbench.colorTheme": "Arc+ (Dark Monochrome)",
     "window.closeWhenEmpty": false,
     "workbench.startupEditor": "welcomePage",
     "git.enableSmartCommit": true,
@@ -32,6 +31,10 @@
     "workbench.iconTheme": "material-icon-theme",
     "explorer.confirmDragAndDrop": false,
     "terminal.integrated.fontFamily": "Ubuntu Mono",
-    "terminal.integrated.fontSize": 14,
+    "terminal.integrated.fontSize": 15,
     "workbench.activityBar.visible": true,
+    "workbench.editor.showTabs": true,
+    "editor.renderControlCharacters": false,
+    "extensions.ignoreRecommendations": false,
+    "workbench.colorTheme": "Monokai Dimmed"
 }
