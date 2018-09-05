@@ -1,12 +1,12 @@
 [Configuration]
-FontName=DejaVu Sans Mono 12
+FontName=Liberation Mono 11.5
 MiscAlwaysShowTabs=FALSE
 MiscBell=FALSE
 MiscBellUrgent=FALSE
 MiscBordersDefault=TRUE
 MiscCursorBlinks=FALSE
 MiscCursorShape=TERMINAL_CURSOR_SHAPE_UNDERLINE
-MiscDefaultGeometry=80x24
+MiscDefaultGeometry=70x18
 MiscInheritGeometry=FALSE
 MiscMenubarDefault=FALSE
 MiscMouseAutohide=FALSE
@@ -30,12 +30,14 @@ ShortcutsNoHelpkey=TRUE
 ShortcutsNoMenukey=TRUE
 ShortcutsNoMnemonics=TRUE
 WordChars=-A-Za-z0-9,.?%&#_=+@~
-BackgroundMode=TERMINAL_BACKGROUND_TRANSPARENT
-BackgroundDarkness=0.900000
 MiscNewTabAdjacent=FALSE
 ColorForeground=#a8a19f
 ColorBackground=#202020202020
 ColorCursor=x
 ColorPalette=#1b1918;#f22c40;#7b9726;#c38418;#407ee7;#6666ea;#3d97b8;#a8a19f;#766e6b;#f22c40;#7b9726;#c38418;#407ee7;#6666ea;#3d97b8;#f1efee
 ScrollingLines=2000
+MiscShowRelaunchDialog=TRUE
+TextBlinkMode=TERMINAL_TEXT_BLINK_MODE_FOCUSED
+BackgroundDarkness=0.900000
+BackgroundMode=TERMINAL_BACKGROUND_TRANSPARENT
 
