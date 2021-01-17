@@ -1,4 +1,3 @@
 # dotfiles
 
-![screenshot](screenshot-2020-01-17.png)
-
+https://medium.com/toutsbrasil/how-to-manage-your-dotfiles-with-git-f7aeed8adf8b
