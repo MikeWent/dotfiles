@@ -1,0 +1,27 @@
+[Desktop Entry]
+DefaultProfile=1.profile
+
+[DownloadDialog Settings]
+Height 1080=480
+Width 1920=700
+eDP-1 Height 1080=512
+eDP-1 Width 1920=902
+
+[Favorite Profiles]
+Favorites=1.profile
+
+[KonsoleWindow]
+SaveGeometryOnExit=false
+ShowMenuBarByDefault=false
+
+[MainWindow]
+MenuBar=Disabled
+State=AAAA/wAAAAD9AAAAAAAAB3gAAAIJAAAABAAAAAQAAAAIAAAACPwAAAAA
+ToolBarsMovable=Disabled
+eDP-1 HDMI-1 XPosition=0
+eDP-1 HDMI-1 YPosition=24
+eDP-1 XPosition=0
+eDP-1 YPosition=24
+
+[Notification Messages]
+CloseAllTabs=true

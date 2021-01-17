@@ -1,0 +1,296 @@
+# i3 config file (v4)
+
+# Modifier = Win (Super) key
+set $mod Mod4
+
+floating_modifier $mod
+bindsym $mod+Shift+q kill
+
+# change focus
+bindsym $mod+A focus left
+bindsym $mod+S focus down
+bindsym $mod+W focus up
+bindsym $mod+D focus right
+
+# move focused window
+bindsym $mod+Shift+A move left
+bindsym $mod+Shift+S move down
+bindsym $mod+Shift+W move up
+bindsym $mod+Shift+D move right
+
+# split in horizontal orientation
+bindsym $mod+h split h
+
+# split in vertical orientation
+bindsym $mod+v split v
+
+# enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen toggle
+
+# change container layout (stacked, tabbed, toggle split)
+bindsym $mod+I layout stacking
+bindsym $mod+O layout tabbed
+bindsym $mod+P layout toggle split
+
+# toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+
+# change focus between tiling / floating windows
+bindsym $mod+space focus mode_toggle
+
+# focus the parent container
+#bindsym $mod+a focus parent
+
+# focus the child container
+#bindsym $mod+d focus child
+
+# switch to workspace
+bindsym $mod+1 workspace 1
+bindsym $mod+2 workspace 2
+bindsym $mod+3 workspace 3
+bindsym $mod+4 workspace 4
+bindsym $mod+5 workspace 5
+bindsym $mod+6 workspace 6
+bindsym $mod+7 workspace 7
+bindsym $mod+8 workspace 8
+bindsym $mod+9 workspace 9
+bindsym $mod+0 workspace 10
+
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace 1
+bindsym $mod+Shift+2 move container to workspace 2
+bindsym $mod+Shift+3 move container to workspace 3
+bindsym $mod+Shift+4 move container to workspace 4
+bindsym $mod+Shift+5 move container to workspace 5
+bindsym $mod+Shift+6 move container to workspace 6
+bindsym $mod+Shift+7 move container to workspace 7
+bindsym $mod+Shift+8 move container to workspace 8
+bindsym $mod+Shift+9 move container to workspace 9
+bindsym $mod+Shift+0 move container to workspace 10
+
+# enable bak and froth feature
+# workspace_auto_back_and_forth yes
+
+# reload the configuration file
+bindsym $mod+Shift+c reload
+
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Shift+r restart
+
+# exit i3 (logs you out of your X session)
+bindsym $mod+Shift+e exec --no-startup-id "i3-nagbar -t warning -m 'Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+#bindsym $mod+Shift+e exec --no-startup-id qdbus org.kde.ksmserver /KSMServer org.kde.KSMServerInterface.logout -1 -1 -1
+
+# resize window (you can also use the mouse for that)
+mode "resize" {
+        bindsym A  resize shrink width  5 px or 5 ppt
+        bindsym S  resize shrink height 5 px or 5 ppt
+        bindsym W  resize grow   height 5 px or 5 ppt
+        bindsym D  resize grow   width  5 px or 5 ppt
+
+        bindsym Shift+A  resize shrink width  30 px or 30 ppt
+        bindsym Shift+S  resize shrink height 30 px or 30 ppt
+        bindsym Shift+W  resize grow   height 30 px or 30 ppt
+        bindsym Shift+D  resize grow   width  30 px or 30 ppt
+
+        # back to normal: Enter or Escape
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+bindsym $mod+r mode "resize"
+
+# Gaps
+gaps inner 10
+smart_gaps on
+smart_borders on
+bindsym $mod+bracketright gaps inner all plus 2
+bindsym $mod+bracketleft gaps inner all minus 2
+
+# Window title
+new_window pixel 1
+for_window [class="^.*"] border px 1
+font pango:Noto Sans 7
+
+# Window rules
+for_window [window_role="pop-up"] floating enable
+for_window [class="Xfce4-appfinder"] floating enable
+for_window [class="Pinta"] floating enable
+for_window [class="Xfce4-panel"] floating enable
+for_window [class="Pavucontrol"] floating enable
+for_window [class="Nm-connection-editor"] floating enable
+for_window [class="PapersPlease"] floating enable
+for_window [title="Steam Guard - Computer Authorization Required"] floating enable
+for_window [class="VirtualBox Machine"] floating enable
+for_window [class="Onboard Preferences"] floating enable
+for_window [class="zbar"] floating enable
+for_window [title="Touchscreen Rotate"] floating enable
+for_window [class="nitrogen"] floating enable
+for_window [title="Android Emulator"] floating enable
+for_window [title="Emulator"] floating enable
+for_window [title="^Extended controls.*"] floating enable
+for_window [title="^Extended controls.*"] border pixel 1
+for_window [class="usbguard-applet-qt"] floating enable
+for_window [title="Friends List"] floating enable
+for_window [class="simplescreenrecorder"] floating enable
+for_window [class="SimpleScreenRecorder"] floating enable
+for_window [class="Blink"] floating enable
+for_window [class="Galculator"] floating enable
+for_window [class="Qalculate-gtk"] floating enable
+for_window [class="Notifyconf"] floating enable
+for_window [class="Onboard"] border pixel 0
+for_window [class="albert"] floating enable
+for_window [class="Arandr"] floating enable
+for_window [title="jtimer"] floating enable
+for_window [title="Steam - News"] kill
+
+# Firefox save file
+for_window [title="Enter name of file to save to…"] resize set width 400 px
+for_window [title="Enter name of file to save to…"] resize set height 300 px
+
+# Fix glava
+for_window [class="GLava"] floating enable
+for_window [class="GLava"] resize set width 1920 px
+for_window [class="GLava"] resize set height 1080 px
+for_window [class="GLava"] border pixel 0
+for_window [class="GLava"] move absolute position 0 0
+
+# Telegram media viewer fix
+for_window [title="Media viewer" class="TelegramDesktop"] move window to output primary
+for_window [title="Media viewer" class="TelegramDesktop"] fullscreen disable
+for_window [title="Media viewer" class="TelegramDesktop"] floating enable
+for_window [title="Media viewer" class="TelegramDesktop"] border pixel 0
+for_window [title="Media viewer" class="TelegramDesktop"] move absolute position 0 0
+#for_window [title="Media viewer" class="TelegramDesktop"] resize set width 1920 px
+#for_window [title="Media viewer" class="TelegramDesktop"] resize set height 1080 px
+
+# Colors of windows (Vertex Dark theme)
+set $white  #f3f3f5
+set $pink   #C93568
+set $pink   #C27F91
+set $green  #628562
+set $gray   #363636
+set $panel  #111111
+set $dark   #171819
+set $lgray  #C7C7C7
+
+# <colorclass>          <titleframe> <windowborder> <text>  <indicator> <child_border>
+client.focused          $lgray        $lgray         $dark  $lgray
+client.focused_inactive $dark         $dark          $lgray $lgray
+client.unfocused        $dark         $dark          $lgray $lgray
+client.urgent           $pink         $pink          $dark  $pink 
+client.placeholder      $dark         $dark          $lgray
+client.background       $dark
+
+# Application shortcuts
+bindsym $mod+Return exec --no-startup-id "konsole"
+bindsym $mod+B exec --no-startup-id "firefox"
+
+mode "telegram" {
+        bindsym 1 exec --no-startup-id "telegram-desktop -externalupdater"
+        bindsym 2 exec --no-startup-id "telegram-desktop -externalupdater -many -workdir ~/.local/share/TelegramDesktop2"
+        bindsym 3 exec --no-startup-id "telegram-desktop -externalupdater -many -workdir ~/.local/share/TelegramDesktop3"
+        bindsym 4 exec --no-startup-id "telegram-desktop -externalupdater -many -workdir ~/.local/share/TelegramDesktop4"
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+bindsym $mod+M mode "telegram"
+
+mode "display" {
+        bindsym 1 exec --no-startup-id "xrandr --output eDP-1 --mode 1920x1080 --output DP-1 --off; nitrogen --restore"
+        bindsym 2 exec --no-startup-id "xrandr --output eDP-1 --off --output DP-1 --mode 2560x1440; nitrogen --restore"
+
+        bindsym Left  exec --no-startup-id "xrandr --output DP-1 --rotate left"
+        bindsym Up    exec --no-startup-id "xrandr --output DP-1 --rotate normal"
+        bindsym Down  exec --no-startup-id "xrandr --output DP-1 --rotate inverted"
+        bindsym Right exec --no-startup-id "xrandr --output DP-1 --rotate right"
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+bindsym $mod+F12 mode "display"
+
+# Wireguard
+bindsym $mod+KP_Substract exec --no-startup-id "~/Scripts/wgui.sh"
+
+bindsym $mod+T exec --no-startup-id "thunar"
+bindsym $mod+J exec --no-startup-id "thunderbird"
+bindsym $mod+U exec --no-startup-id "qalculate-gtk"
+bindsym $mod+L exec --no-startup-id "leafpad ~/Notes/$(date +'%Y.%m.%d-%H.%M.%S')-$(openssl rand -hex 6).txt"
+bindsym $mod+K exec --no-startup-id "gio mount sftp://pelagus; keeweb"
+bindsym $mod+G exec --no-startup-id "xfce4-appfinder"
+
+# Intel Turbo mode toggle
+bindcode 135 exec --no-startup-id "sudo turbo toggle"
+
+# Brightness hotkeys
+bindsym XF86MonBrightnessUp exec --no-startup-id "xbacklight -fps 30 -inc 10"
+bindsym XF86MonBrightnessDown exec --no-startup-id "xbacklight -fps 30 -dec 10"
+bindsym $mod+XF86MonBrightnessUp exec --no-startup-id "xbacklight -fps 30 -inc 1"
+bindsym $mod+XF86MonBrightnessDown exec --no-startup-id "xbacklight -fps 30 -dec 1"
+
+# Volume hotkeys
+bindsym XF86AudioRaiseVolume exec --no-startup-id "pactl set-sink-volume @DEFAULT_SINK@ +2000"
+bindsym XF86AudioLowerVolume exec --no-startup-id "pactl set-sink-volume @DEFAULT_SINK@ -2000"
+bindsym XF86AudioMute exec --no-startup-id "pactl set-sink-mute @DEFAULT_SINK@ toggle"
+bindsym XF86AudioMicMute exec --no-startup-id "pactl set-source-mute @DEFAULT_SOURCE@ toggle"
+
+# Screen rotate hotkeys
+bindsym $mod+Shift+Down exec --no-startud-id "xrandr --output eDP-1 --rxotate inverted"
+
+# Kill gvfs hotkey
+bindsym $mod+Shift+K exec --no-startup-id "killall gvfsd-sftp"
+
+# Dmenu hotkey
+bindcode 108 exec --no-startup-id dmenu_run -i -p "" -nb "$panel" -nf "white" -sb "$white" -sf "$panel"
+
+# Screenshot keys
+bindsym $mod+Print exec --no-startup-id "maim --hidecursor --select --capturebackground --nodecorations=3 | xclip -selection clipboard -t image/png"
+bindsym Shift+Print exec --no-startup-id "maim --capturebackground --window=$(xdotool getactivewindow) --nodecorations=3 | xclip -selection clipboard -t image/png"
+bindsym Print exec --no-startup-id "maim --hidecursor --capturebackground | xclip -selection clipboard -t image/png"
+
+# ==========================================================================================
+
+# Display setup
+exec --no-startup-id "bash ~/.config/i3/scripts/display.sh"
+# Keyboard setup
+exec --no-startup-id "bash ~/.config/i3/scripts/keyboard.sh"
+
+# Start compositor
+exec --no-startup-id "picom"
+
+# Wallpaper
+exec --no-startup-id "nitrogen --restore"
+
+# Panel and notificatios
+exec --no-startup-id "xfce4-panel"
+exec --no-startup-id "/usr/lib/xfce4/notifyd/xfce4-notifyd"
+
+# Configure lockscreen
+bindsym $mod+X exec --no-startup-id "~/.config/i3/scripts/lock.py"
+
+# Autostart
+exec --no-startup-id "nm-applet"
+exec --no-startup-id "blueman-applet"
+exec --no-startup-id "bluetoothctl power on"
+exec --no-startup-id "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
+exec --no-startup-id "gnome-keyring-daemon"
+exec --no-startup-id "/usr/lib/xfce4/notifyd/xfce4-notifyd"
+
+# Hide cursor after 7 seconds of inactivity
+exec --no-startup-id "unclutter -idle 7 -root"
+
+# Enable mouse gestures
+exec --no-startup-id "imwheel"
+
+# Enable battery notifications
+exec --no-startup-id "batsignal -w 15 -c 5 -b -D systemctl hibernate"
+
+# Enable clipboard manager
+exec --no-startup-id "xfce4-clipman"
+
+# Start Telegram in tray
+#exec --no-startup-id "telegram-desktop -startintray -externalupdater -many -workdir ~/.local/share/TelegramDesktop2"
+#exec --no-startup-id "telegram-desktop -startintray -externalupdater"
+
